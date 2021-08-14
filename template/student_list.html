@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <h1 align="center">Список студентов</h1>
+    <h3>
+        <ul>
+            {% for object in objects_list %}
+                <li>
+                   {{object.first_name}}  {{object.last_name}}  {{object.login}} {{object.type_user}}
+                </li>
+            {% endfor %}
+        </ul>
+    </h3>
+{% endblock %}

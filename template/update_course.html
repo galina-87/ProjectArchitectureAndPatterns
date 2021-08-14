@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+      <div>
+
+        <br>
+        <h1 align="center">Курс</h1><br>
+          {% if object_update %}
+          <h2>
+          <form method="post">
+            <fieldset>
+                ID: {{object_update.id}} <br>
+                <label for="coursename">Наименавние курса: </label> <input type = "text"  name = "coursename" value =  {{object_update.name}}> <br> <br>
+                <label for="coursecategory">Категория курса: </label>
+                <input type = "text" name = "coursecategory" value =  {{object_update.category}}> <br> <br>
+                <input type="submit" value="Изменить">
+                <input type="reset">
+            </fieldset>
+        </form>
+<!--          <a href="/studentlist?course_students={{object_update.students}}">Удалить студента с курса</a>-->
+          </h2>
+          <a href="/enrollinacourse?object_update={{object_update.id}}">Записать студента на курс</a>
+          {% else %}
+          Выбранный курс отсутствует, попробуйти открыть еще раз из списка курсов
+          {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <a href="/categorycreate/">Создать новую категорию</a>
+    <br>
+    <h1 align="center">Список категорий</h1>
+     <ul>
+        {% if category_list %}
+            {% for item in category_list %}
+            <li>
+                {{item.name}} ({{item.course_count()}})
+            </li>
+            {% endfor %}
+        {% else %}
+            Пока категорий нет, зайдите позднее
+        {% endif %}
+    </ul>
+
+{% endblock %}

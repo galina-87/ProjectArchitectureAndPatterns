@@ -1,0 +1,43 @@
+<div class="menu">
+    <ul class="ulmenu">
+        <li class="ullimenu">
+            <a href="/" class="linkli">
+                Главная
+            </a>
+        </li>
+        <li class="ullimenu">
+            <a href="/curseslist" class="linkli">
+                Курсы
+            </a>
+        </li>
+        <li class="ullimenu">
+            <a href="/categorylist" class="linkli">
+                Категории
+            </a>
+        </li>
+        <li class="ullimenu">
+            <a href="/contacts" class="linkli">
+                Контакты
+            </a>
+        </li>
+        <li class="ullimenu">
+            <a href="/about" class="linkli">
+                О нас
+            </a>
+        </li>
+        {% if user %}
+        <li class="ullimenu">
+            <a href="#" class="linkli">
+                {{ user.name }}
+            </a>
+        </li>
+        {% else %}
+        <li class="ullimenu">
+            <a href="/registrationuser" class="linkli">
+                Регистрация
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+
+</div>

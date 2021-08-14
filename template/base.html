@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% block css %}
+    {% include "__inc__style.html" %}
+    {% endblock %}
+</head>
+<body>
+    <div class="conter">
+        {% block menu %}
+        {% include "__inc__menu.html" %}
+        <div class="clin1"></div>
+        {% endblock %}
+        {% block body %}
+        {% endblock %}
+        <div class="cln"></div>
+    </div>
+  {% block footer %}
+    <div class="footer">
+        <div class="foot">
+            <p class="fp"><b>Наши контакты:</b></p>
+            <p class="fp">тел: 8(999) 564 54 12</p>
+            <p class="fp">Адрес: г.Москва, ул. Арбат, 54/с2</p>
+        </div>
+        <div class="foot">
+            <p class="fp"><b>Полезное:</b></p>
+            <p class="fp"><a href="#" class="foota">Сотрудничать</a></p>
+            <p class="fp"><a href="#" class="foota">Написать нам</a></p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

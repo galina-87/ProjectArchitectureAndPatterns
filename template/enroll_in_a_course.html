@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <h1 align="center">Записать на курс</h1>
+    <h3>
+        <form method="post">
+        <fieldset>
+<!--            <label for="login_student">Студент: </label>-->
+            <label for="login_student">Курс: </label><input type="text" name="login_student">
+<!--            <select  name="login_student" >-->
+<!--                {% for item in objects_list %}-->
+<!--                <option value={{item.login}}> {{item.login}} </option>-->
+<!--                {% endfor %}-->
+<!--            </select>-->
+            <label for="id_course">Курс: </label><input type="text" name="id_course" value = {{object_update}}>
+            <br> <br>
+            <input type="submit" value="Сохранить">
+            <a href="/curseslist">Вернуться</a>
+        </fieldset>
+    </form>
+    </h3>
+{% endblock %}

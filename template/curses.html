@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+      <div>
+        <a href="/cursescreate">Создать новый курс</a>
+        <br>
+        <h1 align="center">Список курсов</h1>
+        {% if curses_list %}
+            {% for item in curses_list %}
+            <li>
+                <a href="/curse?course={{item.id}}">{{item.name}} (ID категории: {{item.id_category}})</a>
+            </li>
+            {% endfor %}
+        {% else %}
+            Пока курсов нет, зайдите позднее
+        {% endif %}
+    </div>
+{% endblock %}

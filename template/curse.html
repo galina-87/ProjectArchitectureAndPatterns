@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+      <div>
+
+        <br>
+        <h1 align="center">Курс</h1><br>
+          {% if course %}
+          <h2>
+          ID: {{course.id}} <br>
+          Наименование: {{course.name}} <br>
+          Категория: {{course.id_category}} <br>
+          <a href="/studentlist?course_students={{course.id}}">Студенты курса</a>
+          </h2>
+<!--          <a href="/cursecopy?course_id={{course.id}}">Скопировать курс</a>-->
+
+          <a href="updatecourse?object_update={{course.id}}">Изменить курс</a>
+          <a href="/enrollinacourse?object_update={{course.id}}">Записать студента на курс</a>
+          {% else %}
+          Выбранный курс отсутствует, попробуйти открыть еще раз из списка курсов
+          {% endif %}
+    </div>
+{% endblock %}

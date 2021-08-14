@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <h1 align="center">Создание курса</h1>
+    <form method="post">
+        <fieldset>
+            <label for="name">Наименование курса: </label> <input type="text" name="name" placeholder="Название">
+            <label for="category">Категория: </label>
+            <select  name="id_category" >
+                {% for item in category_list %}
+                <option value={{item.id}}> {{item.name}} </option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Сохранить">
+            <a href="/curseslist">Вернуться</a>
+        </fieldset>
+    </form>
+{% endblock %}

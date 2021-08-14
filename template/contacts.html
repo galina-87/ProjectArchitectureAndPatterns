@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <h1 align="center">Контакты</h1>
+    <h3 align="left">Информация обновляется, попробуйте зайти позднее</h3>
+    <h3>
+        <form method="post">
+            <fieldset>
+                <h2>Напишите нам сообщение: </h2><br><br><br>
+                <label for="firstname">Имя: </label> <input type = "text"  name = "firstname" value =  "Введите имя"> <br> <br>
+                <label for="lastname">Фамилия: </label><input type = "text" name = "lastname" value =  "Введите фамилию"> <br> <br>
+                <label for="Email">Ваш e-mail: </label><input type = "email" name = "Email"><br><br>
+                <label for="sex">Мужчина</label><input  type = "radio" name = "sex" value =  "male" checked>
+                <label for="sex">Женщина</label><input type = "radio" name = "sex" value =  "female"> <br> <br>
+                <input type = "radio" name = "type1" value = "low"><label for="type1">Меньше 18</label><br>
+                <input type = "radio" name = "type1" value = "2old"><label for="type1">От 18 до 35</label><br>
+                <input type = "radio" name = "type1" value = "high"><label for="type1">Больше 35</label><br><br><br>
+                <textarea cols="80" rows="6" name = "textmail">Ваше сообщение</textarea><br><br>
+                <br>
+                <input type="submit">
+                <input type="reset">
+            </fieldset>
+        </form>
+    </h3>
+{% endblock %}
